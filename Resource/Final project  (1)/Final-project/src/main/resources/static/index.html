@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#user">User</a></li>
+        <li><a href="#event-scheduling">Event Scheduling</a></li>
+        <li><a href="#resource-booking">Resource Booking</a></li>
+        <li><a href="#task-tracking">Task Tracking</a></li>
+        <li style="margin-left: auto;"><a href="#contact-us">Contact Us</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#calendar">Calendar</a></li>
+    </ul>
+</nav>
+
+<h1>Resource Management</h1>
+
+<!-- Notification -->
+<div id="notification" class="hidden"></div>
+
+<!-- Search Form -->
+<form id="searchForm">
+    <input type="text" id="searchId" placeholder="Enter Resource ID" required>
+    <button type="submit">Search</button>
+</form>
+
+<!-- Form to add/update a resource -->
+<form id="resourceForm">
+    <input type="hidden" id="resourceId">
+    <input type="text" id="resourceName" placeholder="Resource Name" required>
+    <select id="resourceType" required>
+        <option value="VENUE">Venue</option>
+        <option value="EQUIPMENT">Equipment</option>
+        <option value="OTHER">Other</option>
+    </select>
+    <input type="date" id="bookingDate" required>
+    <button type="submit" id="addButton">Add Resource</button>
+    <button type="button" id="updateButton" class="hidden">Update Resource</button>
+</form>
+
+<!-- Delete Resource -->
+<button id="deleteButton" class="hidden">Delete Selected Resource</button>
+
+<!-- Display resources -->
+<div id="loading">Loading resources...</div>
+<div id="resources"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
