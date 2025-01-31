@@ -1,0 +1,10 @@
+CREATE DATABASE email_db;
+
+USE email_db;
+
+CREATE TABLE emails(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    recipient_email VARCHAR(100) NOT NULL,
+    subject VARCHAR(150) NOT NULL,
+    message TEXT NOT NULL
+    );
