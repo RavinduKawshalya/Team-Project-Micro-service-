@@ -1,0 +1,10 @@
+CREATE DATABASE task_tracking; 
+USE task_tracking;
+
+CREATE TABLE tasks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    task_name VARCHAR(100) NOT NULL,
+    assigned_to VARCHAR(50), -- Store an identifier like username or email
+    status ENUM('PENDING', 'IN_PROGRESS', 'COMPLETED') DEFAULT 'PENDING',
+    deadline DATE NOT NULL,
+    );
